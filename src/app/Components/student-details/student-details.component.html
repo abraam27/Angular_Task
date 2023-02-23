@@ -1,0 +1,27 @@
+<table class="table">
+    <tbody *ngIf="student ; else falseBlock">
+        <tr>
+            <th scope="col">Name</th>
+            <td>{{student.name}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Age</th>
+            <td>{{student.age}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Phone</th>
+            <td>{{student.phone}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Email</th>
+            <td>{{student.email}}</td>
+        </tr>
+    </tbody>
+    <ng-template #falseBlock>
+        <tbody>
+            <tr>
+                <th colspan="2">Loading...</th>
+            </tr>
+        </tbody>
+    </ng-template>
+</table>

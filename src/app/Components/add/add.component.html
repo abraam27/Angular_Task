@@ -1,0 +1,13 @@
+<div>
+    <form class="form"  [formGroup]="registerationFormValidation" (ngSubmit)="add()">
+        <input formControlName="name" type="text"  placeholder="Enter Name">
+        <p *ngIf="!NameValid" class="alert alert-danger">Wrong Name</p>
+        <input formControlName="age" type="text" placeholder="Enter Age">
+        <p *ngIf="!AgeValid" class="alert alert-danger">Wrong Age</p>
+        <input formControlName="phone" type="text" placeholder="Enter Phone">
+        <p *ngIf="!PhoneValid" class="alert alert-danger">Wrong Phone</p>
+        <input formControlName="email" type="text" placeholder="Enter Email">
+        <p *ngIf="!EmailValid" class="alert alert-danger"> Wrong Email</p>
+        <input type="submit" value="ADD" />
+    </form>
+</div>

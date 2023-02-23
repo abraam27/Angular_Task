@@ -1,0 +1,24 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Details</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.phone}}</td>
+        <td>{{s.email}}</td>
+        <td><a routerLink="/students/{{s.id}}"><img src="assets/images/details.png" /></a></td>
+        <td><a routerLink="/update/{{s.id}}"><img src="assets/images/edit.png" /></a></td>
+        <td><a (click) = "delete(s.id)"><img src="assets/images/waste.png" /></a></td>
+      </tr>
+    </tbody>
+</table>
